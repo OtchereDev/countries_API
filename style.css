@@ -29,7 +29,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 2% 5%;
+    padding: 5% 5%;
     background-color: var(--Dark_Blue_Dark_Mode_Elements);
 }
 
@@ -168,6 +168,39 @@ nav .modes .switcher .mode .moon {
 }
 
 .countries .card {
-    width: 80%;
+    width: 60%;
     background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+.countries .card .flag {
+    width: 100%;
+    height: 150px;
+}
+
+.countries .card .flag img {
+    width: 100%;
+    height: 100%;
+}
+
+.countries .card .card_info {
+    padding: 8% 5%;
+}
+
+.countries .card .card_info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.countries .card .card_info h2 {
+    margin: 2% auto 5% auto;
+    font-size: 2rem;
+}
+
+.countries .card .card_info h3 {
+    margin: auto auto 2% auto;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
