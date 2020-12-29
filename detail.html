@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="det_style.css">
+    <link rel="stylesheet" href="detail-style.css">
     <title>Country Detail</title>
 </head>
 
@@ -17,53 +19,60 @@
                 Where in the world?
             </h1>
         </div>
-        <div class="mode">
+        <div class="modes">
             <div class="switcher">
-                <div class="dark">
+                <div class="mode dark">
                     <div class="moon">
-                        <i></i>
+                        <ion-icon name="moon"></ion-icon>
                     </div>
                     <div class="">Dark Mode</div>
                 </div>
-                <div class="dark">
-                    <div class="sun">
-                        <i></i>
-                    </div>
-                    <div class="">Light Mode</div>
-                </div>
+
             </div>
         </div>
     </nav>
 
     <section class="back">
         <button class="back_btn">
-            Back
+            <div class="chev">
+                <ion-icon name="arrow-back"></ion-icon>
+            </div> 
+            <h5>Back</h5>
         </button>
     </section>
     <section class="country_det">
         <div class="det_left">
-            <img src="" alt="">
+            <div class="img_cont">
+                <img src="https://restcountries.eu/data/col.svg" alt="">
+
+            </div>
         </div>
         <div class="det_right">
             <h2> Country Name </h2>
             <div class="country_info">
                 <div class="info_left">
-                    <h3>Native name: Country Name</h3>
-                    <h3>Population: 8000</h3>
-                    <h3>Region: Africa</h3>
-                    <h3>Sub region: West</h3>
-                    <h3>Capital: Accra</h3>
+                    <h3>Native name: <span>Country Name</span> </h3>
+                    <h3>Population: <span>8000</span> </h3>
+                    <h3>Region: <span>Africa</span> </h3>
+                    <h3>Sub region: <span>West</span> </h3>
+                    <h3>Capital: <span>Accra</span> </h3>
                 </div>
                 <div class="info_right">
-                    <h3>Top Level Domain: .com</h3>
-                    <h3>Currency: cedis</h3>
-                    <h3>Languages: Akan</h3>
+                    <h3>Top Level Domain: <span>.com</span> </h3>
+                    <h3>Currency: <span>cedis</span> </h3>
+                    <h3>Languages: <span>Akan</span> </h3>
                 </div>
             </div>
-            <h3>Border Country:</h3>
-            <button>Togo</button>
-            <button>Burkina faso</button>
-            <button>Cote de Ivore</button>
+            <div class="border_cont">
+                <h3 class="border">Border Country:</h3>
+                <div class="border_btn">
+                    <button>Togo</button>
+                    <button>Burkina faso</button>
+                    <button>Cote de Ivore</button>
+                </div>
+            </div>
+
+
         </div>
     </section>
 

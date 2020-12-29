@@ -1,0 +1,195 @@
+:root {
+    --Dark_Blue_Dark_Mode_Elements: hsl(209, 23%, 22%);
+    --Very_Dark_Blue_Dark_Mode_Background: hsl(207, 26%, 17%);
+    --Very_Dark_Blue_Light_Mode_Text: hsl(200, 15%, 8%);
+    --Dark_Gray_Light_Mode_Input: hsl(0, 0%, 52%);
+    --Very_Light_Gray_Light_Mode_Background: hsl(0, 0%, 98%);
+    --White_Dark_Mode_Text_Light_Mode_Elements: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Nunito';
+    width: 100%;
+    background-color: var(--Very_Dark_Blue_Dark_Mode_Background);
+    color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+}
+
+nav .logo {
+    width: 50%;
+}
+
+nav .logo h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+nav .modes {
+    width: 23%
+}
+
+nav .modes .switcher {
+    width: 100%;
+}
+
+nav .modes .switcher .mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+nav .modes .switcher .mode .moon {
+    margin-right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back {
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.back .back_btn {
+    width: 30%;
+    padding: 2% 1%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.back .back_btn .chev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+section.country_det {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10%;
+}
+
+section.country_det .det_left {
+    width: 100%;
+}
+
+section.country_det .det_left .img_cont {
+    width: 80%;
+    margin-left: 10%;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+section.country_det .det_left .img_cont img {
+    width: 100%;
+    height: 100%;
+}
+
+section.country_det .det_right {
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+section.country_det .det_right h2 {
+    margin-bottom: 5%;
+    font-size: 2.5rem;
+}
+
+section.country_det .det_right .country_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.country_det .det_right .country_info .info_left {
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+section.country_det .det_right .country_info .info_left h3 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+}
+
+section.country_det .det_right .country_info .info_left h3 span {
+    font-weight: 400;
+}
+
+section.country_det .det_right .country_info .info_right {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+section.country_det .det_right .country_info .info_right h3 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+}
+
+section.country_det .det_right .country_info .info_right h3 span {
+    font-weight: 400;
+}
+
+section.country_det .det_right .border_cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.country_det .det_right .border_cont .border {
+    font-size: 1.8rem;
+    margin-bottom: 3%;
+}
+
+section.country_det .det_right .border_cont .border_btn {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+section.country_det .det_right .border_cont .border_btn button {
+    width: 35%;
+    padding: 2% 2%;
+    background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
