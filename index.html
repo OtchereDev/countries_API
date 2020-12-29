@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Countries API</title>
 </head>
 
@@ -14,37 +18,40 @@
                 Where in the world?
             </h1>
         </div>
-        <div class="mode">
+        <div class="modes">
             <div class="switcher">
-                <div class="dark">
+                <div class="mode dark">
                     <div class="moon">
-                        <i></i>
+                        <ion-icon name="moon"></ion-icon>
                     </div>
                     <div class="">Dark Mode</div>
                 </div>
-                <div class="dark">
-                    <div class="sun">
-                        <i></i>
-                    </div>
-                    <div class="">Light Mode</div>
-                </div>
+
             </div>
         </div>
     </nav>
     <section class="search_region">
         <div class="search_bar">
-            <div class="icon">
-                <i></i>
+            <div class="search_icon">
+                <ion-icon name="search"></ion-icon>
             </div>
-            <input type="text" name="country" id="country" placeholder="Search for a country...">
+            <form action="" class="search_form">
+                <input type="text" name="country" id="country" placeholder="Search for a country...">
+            </form>
 
         </div>
         <div class="filter">
             <div class="filter_box">
-                <h5>
-                    Filter by region
-                </h5>
-                <ul>
+
+                <div class="filter_by">
+                    <h5>
+                        Filter by region
+                    </h5>
+                    <div class="chev">
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </div>
+                </div>
+                <ul class="category">
                     <li>Africa</li>
                     <li>America</li>
                     <li>Asia</li>
@@ -58,10 +65,10 @@
     <section class="countries">
         <div class="card">
             <div class="flag">
-                <img src="" alt="">
+                <img src="https://via.placeholder.com/300x200" alt="">
             </div>
             <div class="card_info">
-                <h2>country Name</h2>
+                <h2><a href="/detail.html?country=oliver">country Name</a> </h2>
                 <h3>Population : 8000</h3>
                 <h3>Region: Somewhere</h3>
                 <h3>Capital: Here</h3>
