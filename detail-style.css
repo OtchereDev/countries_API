@@ -23,13 +23,13 @@ body {
     width: 100%;
     background-color: var(--Very_Dark_Blue_Dark_Mode_Background);
     color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
-    transition: all 60s ease-in-out;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode {
     background-color: var(--Very_Light_Gray_Light_Mode_Background);
     color: var(--Very_Dark_Blue_Light_Mode_Text);
-    transition: all 60s ease-in-out;
+    transition: all 5s ease-in-out;
 }
 
 nav {
@@ -38,11 +38,13 @@ nav {
     justify-content: space-between;
     padding: 5% 5%;
     background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode nav {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 nav .logo {
@@ -67,6 +69,7 @@ nav .modes .switcher .mode {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 nav .modes .switcher .mode .moon {
@@ -94,11 +97,13 @@ nav .modes .switcher .mode .moon {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .back .back_btn {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 .back .back_btn .chev {
@@ -209,11 +214,13 @@ section.country_det .det_right .border_cont .border_btn button {
     cursor: pointer;
     margin-left: 2%;
     margin-bottom: 2%;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode section.country_det .det_right .border_cont .border_btn button {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 @media screen and (min-width:960px) {
@@ -234,9 +241,11 @@ body.light_mode section.country_det .det_right .border_cont .border_btn button {
         width: 10%;
         padding: 1%;
         color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+        transition: all 5s ease-in-out;
     }
     body.light_mode .back .back_btn {
         color: var(--Very_Dark_Blue_Light_Mode_Text);
+        transition: all 5s ease-in-out;
     }
     section.country_det {
         flex-direction: row;
@@ -289,8 +298,10 @@ body.light_mode section.country_det .det_right .border_cont .border_btn button {
     section.country_det .det_right .border_cont .border_btn button {
         width: 30%;
         color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+        transition: all 5s ease-in-out;
     }
     body.light_mode section.country_det .det_right .border_cont .border_btn button {
         color: var(--Very_Dark_Blue_Light_Mode_Text);
+        transition: all 5s ease-in-out;
     }
 }

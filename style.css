@@ -23,12 +23,13 @@ body {
     width: 100%;
     background-color: var(--Very_Dark_Blue_Dark_Mode_Background);
     color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode {
     background-color: var(--Very_Light_Gray_Light_Mode_Background);
     color: var(--Very_Dark_Blue_Light_Mode_Text);
-    transition: all 60s ease-in-out;
+    transition: all 5s ease-in-out;
 }
 
 nav {
@@ -37,11 +38,13 @@ nav {
     justify-content: space-between;
     padding: 5% 5%;
     background-color: var(--Dark_Blue_Dark_Mode_Elements);
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode nav {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 nav .logo {
@@ -54,7 +57,7 @@ nav .logo h1 {
 }
 
 nav .modes {
-    width: 23%
+    width: 23%;
 }
 
 nav .modes .switcher {
@@ -66,6 +69,7 @@ nav .modes .switcher .mode {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 nav .modes .switcher .mode .moon {
@@ -91,11 +95,13 @@ nav .modes .switcher .mode .moon {
     padding: 2%;
     margin-bottom: 5%;
     border-radius: 5px;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .search_region .search_bar {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 .search_region .search_bar .search_icon {
@@ -111,6 +117,7 @@ body.light_mode .search_region .search_bar {
 
 body.light_mode .search_region .search_bar .search_icon ion-icon {
     color: var(--Dark_Gray_Light_Mode_Input);
+    transition: all 5s ease-in-out;
 }
 
 .search_region .search_bar .search_form {
@@ -127,11 +134,13 @@ body.light_mode .search_region .search_bar .search_icon ion-icon {
     outline: none;
     font-family: inherit;
     font-size: 1.5rem;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .search_region .search_bar .search_form input {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     color: var(--Dark_Gray_Light_Mode_Input);
+    transition: all 5s ease-in-out;
 }
 
 .search_region .search_bar .search_form input::placeholder {
@@ -152,12 +161,14 @@ body.light_mode .search_region .search_bar .search_form input {
     padding: 10%;
     position: relative;
     font-size: 1.2rem;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .search_region .filter .filter_box {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     color: var(--Dark_Gray_Light_Mode_Input);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 .search_region .filter .filter_box .filter_by {
@@ -184,11 +195,13 @@ body.light_mode .search_region .filter .filter_box {
     top: 110%;
     left: 0;
     display: none;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .search_region .filter .filter_box .category {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 .search_region .filter .filter_box .category li {
@@ -209,11 +222,13 @@ body.light_mode .search_region .filter .filter_box .category {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 10%;
+    transition: all 5s ease-in-out;
 }
 
 body.light_mode .countries .card {
     background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: all 5s ease-in-out;
 }
 
 .countries .card .flag {
