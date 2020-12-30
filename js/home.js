@@ -4,6 +4,7 @@ const body = document.querySelector('body')
 const filter_box = document.querySelector('.filter_box')
 const region_category = document.querySelector('.category')
 const countries_cont = document.querySelector('.countries')
+const load_btn = document.querySelector('.load')
 
 // UI class
 class Card {
@@ -16,7 +17,7 @@ class Card {
                         <img src="${this.country.flag}" alt="">
                     </div>
                     <div class="card_info">
-                        <h2><a href="/detail.html?country=oliver">${this.country.name}</a> </h2>
+                        <h2><a href="/detail.html?country=${this.country.name}">${this.country.name}</a> </h2>
                         <h3>Population : <span>${this.country.population}</span> </h3>
                         <h3>Region: <span>${this.country.region}</span> </h3>
                         <h3>Capital: <span>${this.country.capital}</span> </h3>
@@ -56,7 +57,25 @@ function chooseRegion(e) {
     }
     e.stopPropagation()
 }
-// 'https://restcountries.eu/rest/v2/all'
+
+function loadMore() {
+    const start = document.querySelectorAll('.countries .card').length
+    const end = start + 6
+    const country_data = data.slice(start, end)
+    country_data.forEach(country => {
+        const countryCard = new Card(country)
+        countryCard.injectCard()
+    })
+    if (end >= data.length) {
+        load_btn.setAttribute('disabled', 'true')
+    }
+}
+
+
+
+
+
+// API stuff
 async function fetchCountries() {
     response = await fetch('https://restcountries.eu/rest/v2/all')
     data = await response.json()
@@ -66,11 +85,9 @@ async function fetchCountries() {
 const country = fetchCountries()
 
 country.then(data => {
-    const country_data = data.slice(0, 6)
-    country_data.forEach(country => {
-        const countryCard = new Card(country)
-        countryCard.injectCard()
-    })
+
+    loadMore()
+    load_btn.addEventListener('click', loadMore)
 }).catch(error => {
     console.log(error)
 })

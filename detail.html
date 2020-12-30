@@ -43,32 +43,30 @@
     <section class="country_det">
         <div class="det_left">
             <div class="img_cont">
-                <img src="https://restcountries.eu/data/col.svg" alt="">
+                <img class="flag" src="https://restcountries.eu/data/col.svg" alt="">
 
             </div>
         </div>
         <div class="det_right">
-            <h2> Country Name </h2>
+            <h2 class="name"> Country Name </h2>
             <div class="country_info">
                 <div class="info_left">
-                    <h3>Native name: <span>Country Name</span> </h3>
-                    <h3>Population: <span>8000</span> </h3>
-                    <h3>Region: <span>Africa</span> </h3>
-                    <h3>Sub region: <span>West</span> </h3>
-                    <h3>Capital: <span>Accra</span> </h3>
+                    <h3 class="native">Native name: <span>Country Name</span> </h3>
+                    <h3 class="pop">Population: <span>8000</span> </h3>
+                    <h3 class="region">Region: <span>Africa</span> </h3>
+                    <h3 class="sub">Sub region: <span>West</span> </h3>
+                    <h3 class="cap">Capital: <span>Accra</span> </h3>
                 </div>
                 <div class="info_right">
-                    <h3>Top Level Domain: <span>.com</span> </h3>
-                    <h3>Currency: <span>cedis</span> </h3>
-                    <h3>Languages: <span>Akan</span> </h3>
+                    <h3 class="domain">Top Level Domain: <span>.com</span> </h3>
+                    <h3 class="curr">Currency: <span></span> </h3>
+                    <h3 class="lan">Languages: <span></span> </h3>
                 </div>
             </div>
             <div class="border_cont">
                 <h3 class="border">Border Country:</h3>
                 <div class="border_btn">
-                    <button>Togo</button>
-                    <button>Burkina faso</button>
-                    <button>Cote de Ivore</button>
+
                 </div>
             </div>
 
@@ -76,12 +74,8 @@
         </div>
     </section>
 
-    <script>
-        const urlParam = new URLSearchParams(window.location.search);
-        const myParam = urlParam.get('country')
-        console.log(myParam)
-    </script>
-    <script src="js/home.js"></script>
+
+    <script src="js/detail.js"></script>
 </body>
 
 </html>
