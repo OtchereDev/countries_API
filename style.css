@@ -291,6 +291,7 @@ body.light_mode .countries .card {
     outline: none;
     border-radius: 5px;
     transition: all 5s ease-in-out;
+    cursor: pointer;
 }
 
 body.light_mode .load_more .load {
