@@ -193,3 +193,74 @@ section.country_det .det_right .border_cont .border_btn button {
     margin-left: 2%;
     margin-bottom: 2%;
 }
+
+@media screen and (min-width:960px) {
+    nav {
+        padding: 2% 2%;
+    }
+    nav .logo {
+        width: 50%;
+        margin-left: 4%;
+    }
+    nav .logo h1 {
+        font-size: 1.8rem;
+    }
+    .back {
+        padding: 3% 5%;
+    }
+    .back .back_btn {
+        width: 10%;
+        padding: 1%;
+    }
+    section.country_det {
+        flex-direction: row;
+        padding-top: 1%;
+        margin-bottom: 5%;
+    }
+    section.country_det .det_left {
+        width: 50%;
+        height: 100%;
+    }
+    section.country_det .det_left .img_cont {
+        width: 90%;
+        margin-left: 5%;
+        height: 350px;
+    }
+    section.country_det .det_right {
+        width: 50%;
+        padding-top: 0;
+        padding-left: 5%;
+    }
+    section.country_det .det_right h2 {
+        font-size: 3rem;
+    }
+    section.country_det .det_right .country_info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    section.country_det .det_right .country_info .info_left {
+        width: 50%;
+        margin-bottom: 5%;
+    }
+    section.country_det .det_right .country_info .info_left h3 {
+        font-size: 1.8rem;
+    }
+    section.country_det .det_right .country_info .info_right {
+        width: 50%;
+        margin-bottom: 3%;
+    }
+    section.country_det .det_right .country_info .info_right h3 {
+        font-size: 1.8rem;
+    }
+    section.country_det .det_right .border_cont {
+        flex-direction: row;
+    }
+    section.country_det .det_right .border_cont .border {
+        font-size: 1.8rem;
+        width: 30%;
+    }
+    section.country_det .det_right .border_cont .border_btn button {
+        width: 30%;
+    }
+}
