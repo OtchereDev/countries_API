@@ -25,12 +25,23 @@ body {
     color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
 }
 
+body.light_mode {
+    background-color: var(--Very_Light_Gray_Light_Mode_Background);
+    color: var(--Very_Dark_Blue_Light_Mode_Text);
+    transition: all 60s ease-in-out;
+}
+
 nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 5% 5%;
     background-color: var(--Dark_Blue_Dark_Mode_Elements);
+}
+
+body.light_mode nav {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav .logo {
@@ -82,6 +93,11 @@ nav .modes .switcher .mode .moon {
     border-radius: 5px;
 }
 
+body.light_mode .search_region .search_bar {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
 .search_region .search_bar .search_icon {
     display: flex;
     align-items: center;
@@ -91,6 +107,10 @@ nav .modes .switcher .mode .moon {
 
 .search_region .search_bar .search_icon ion-icon {
     font-size: 2rem;
+}
+
+body.light_mode .search_region .search_bar .search_icon ion-icon {
+    color: var(--Dark_Gray_Light_Mode_Input);
 }
 
 .search_region .search_bar .search_form {
@@ -107,6 +127,11 @@ nav .modes .switcher .mode .moon {
     outline: none;
     font-family: inherit;
     font-size: 1.5rem;
+}
+
+body.light_mode .search_region .search_bar .search_form input {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    color: var(--Dark_Gray_Light_Mode_Input);
 }
 
 .search_region .search_bar .search_form input::placeholder {
@@ -127,6 +152,12 @@ nav .modes .switcher .mode .moon {
     padding: 10%;
     position: relative;
     font-size: 1.2rem;
+}
+
+body.light_mode .search_region .filter .filter_box {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    color: var(--Dark_Gray_Light_Mode_Input);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
 .search_region .filter .filter_box .filter_by {
@@ -155,6 +186,11 @@ nav .modes .switcher .mode .moon {
     display: none;
 }
 
+body.light_mode .search_region .filter .filter_box .category {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
 .search_region .filter .filter_box .category li {
     padding-top: 2%;
 }
@@ -173,6 +209,11 @@ nav .modes .switcher .mode .moon {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 10%;
+}
+
+body.light_mode .countries .card {
+    background-color: var(--White_Dark_Mode_Text_Light_Mode_Elements);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
 .countries .card .flag {
@@ -202,6 +243,9 @@ nav .modes .switcher .mode .moon {
 .countries .card .card_info h3 {
     margin: auto auto 2% auto;
     font-size: 1.3rem;
+}
+
+.countries .card .card_info h3 span {
     font-weight: 400;
 }
 
