@@ -204,3 +204,61 @@ nav .modes .switcher .mode .moon {
     font-size: 1.3rem;
     font-weight: 400;
 }
+
+@media screen and (min-width:960px) {
+    .countries {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: space-between;
+    }
+    .countries .card {
+        width: 30%;
+        margin-bottom: 4%;
+    }
+    .countries .card .card_info h2 {
+        font-size: 2.3rem;
+    }
+    .countries .card .card_info h3 {
+        font-size: 1.5rem;
+    }
+    .search_region .filter {
+        width: 12%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .search_region .filter .filter_box .category {
+        padding: 10%;
+    }
+    .search_region .filter .filter_box .category li {
+        padding-top: 5%;
+    }
+    .search_region {
+        margin-top: 2%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .search_region .search_bar {
+        width: 30%;
+        margin-left: 5%;
+        padding: 1%;
+        margin-bottom: auto;
+    }
+    .search_region .search_bar .search_icon {
+        margin-left: 5%;
+    }
+    .search_region .search_bar .search_form {
+        width: 80%;
+    }
+    nav {
+        padding: 2% 2%;
+    }
+    nav .logo {
+        width: 50%;
+        margin-left: 4%;
+    }
+    nav .logo h1 {
+        font-size: 1.8rem;
+    }
+}
