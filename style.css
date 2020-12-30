@@ -162,6 +162,7 @@ body.light_mode .search_region .search_bar .search_form input {
     position: relative;
     font-size: 1.2rem;
     transition: all 5s ease-in-out;
+    cursor: pointer;
 }
 
 body.light_mode .search_region .filter .filter_box {
@@ -206,6 +207,12 @@ body.light_mode .search_region .filter .filter_box .category {
 
 .search_region .filter .filter_box .category li {
     padding-top: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.search_region .filter .filter_box .category li:hover {
+    opacity: 0.8;
 }
 
 .countries {
@@ -319,5 +326,8 @@ body.light_mode .countries .card {
     }
     nav .logo h1 {
         font-size: 1.8rem;
+    }
+    nav .modes {
+        width: 8%;
     }
 }
