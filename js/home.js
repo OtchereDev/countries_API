@@ -55,7 +55,6 @@ function changeRegion(e) {
 
 function chooseRegion(e) {
     if (e.target.tagName === 'LI') {
-        console.log(e.target.textContent)
         const country = fetchRegionCountry(e.target.textContent)
 
         countries_cont.innerHTML = ''
@@ -68,7 +67,7 @@ function chooseRegion(e) {
             console.log(error)
         })
     }
-    e.stopPropagation()
+
 }
 
 function loadMore() {
@@ -92,10 +91,23 @@ function searchCountryName(e) {
 
     countries_cont.innerHTML = ''
 
-    country.then(data => {
+    country.then(response => {
+        if (response.status) {
+            const data = response.data
+            loadMore()
+            load_btn.addEventListener('click', loadMore)
+            countries_cont.style.justifyContent = 'space-between'
+            countries_cont.style.alignItems = 'unset'
+            countries_cont.style.marginBottom = 'auto'
+            load_btn.style.display = 'block'
+        } else {
+            countries_cont.innerHTML = `<h1 style='font-size:2rem;'>No country found with name "${e.target.value}"</h1>`
+            countries_cont.style.justifyContent = 'center'
+            countries_cont.style.alignItems = 'center'
+            countries_cont.style.marginBottom = '5%'
+            load_btn.style.display = 'none'
+        }
 
-        loadMore()
-        load_btn.addEventListener('click', loadMore)
     }).catch(error => {
         console.log(error)
     })
@@ -127,9 +139,22 @@ async function fetchRegionCountry(region) {
 }
 
 async function fetchCountryByTerm(term) {
-    response = await fetch(`https://restcountries.eu/rest/v2/name/${term}`)
-    data = await response.json()
-    return data
+    if (term.length) {
+        response = await fetch(`https://restcountries.eu/rest/v2/name/${term}`)
+        data = await response.json()
+        const status = response.ok
+        return { data, status }
+    } else {
+
+        country_data = await fetchCountries()
+
+        return { data: country_data, status: true }
+
+
+
+
+    }
+
 }
 
 // event listeners
@@ -143,5 +168,6 @@ searchInput.addEventListener('keyup', searchCountryName)
 
 searchForm.addEventListener('submit', e => {
     e.preventDefault()
+    searchForm.reset()
 
 })
