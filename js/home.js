@@ -78,7 +78,8 @@ function loadMore() {
         const countryCard = new Card(country)
         countryCard.injectCard()
     })
-    if (end >= data.length) {
+    if (end > data.length) {
+        console.log(data.length, end)
         load_btn.setAttribute('disabled', 'true')
         load_btn.textContent = 'No more data'
         load_btn.style.cursor = 'not-allowed'
@@ -164,7 +165,7 @@ filter_box.addEventListener('click', changeRegion)
 
 region_category.addEventListener('click', chooseRegion)
 
-searchInput.addEventListener('keyup', searchCountryName)
+searchInput.addEventListener('keydown', searchCountryName)
 
 searchForm.addEventListener('submit', e => {
     e.preventDefault()

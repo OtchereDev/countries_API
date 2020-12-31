@@ -149,7 +149,7 @@ body.light_mode .search_region .search_bar .search_form input {
 }
 
 .search_region .filter {
-    width: 30%;
+    width: 40%;
     margin-left: 10%;
 }
 
@@ -160,7 +160,7 @@ body.light_mode .search_region .search_bar .search_form input {
     border-radius: 5px;
     padding: 10%;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     transition: all 5s ease-in-out;
     cursor: pointer;
 }
