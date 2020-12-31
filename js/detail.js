@@ -26,7 +26,6 @@ function changeMood(e) {
 
     }
 }
-
 async function getBorderCountry(border) {
     response = await fetch(`https://restcountries.eu/rest/v2/alpha/${border}`)
     data = await response.json()
