@@ -45,7 +45,7 @@ function btnMaker(country) {
 }
 
 function backHome(e) {
-    window.location.replace('/index.html')
+    window.location.replace('index.html')
 }
 
 function redirectBorder(e) {
