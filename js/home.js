@@ -5,6 +5,8 @@ const filter_box = document.querySelector('.filter_box')
 const region_category = document.querySelector('.category')
 const countries_cont = document.querySelector('.countries')
 const load_btn = document.querySelector('.load')
+const searchInput = document.querySelector('.search_form input')
+const searchForm = document.querySelector('.search_form')
 
 // UI class
 class Card {
@@ -54,6 +56,17 @@ function changeRegion(e) {
 function chooseRegion(e) {
     if (e.target.tagName === 'LI') {
         console.log(e.target.textContent)
+        const country = fetchRegionCountry(e.target.textContent)
+
+        countries_cont.innerHTML = ''
+
+        country.then(data => {
+
+            loadMore()
+            load_btn.addEventListener('click', loadMore)
+        }).catch(error => {
+            console.log(error)
+        })
     }
     e.stopPropagation()
 }
@@ -68,10 +81,25 @@ function loadMore() {
     })
     if (end >= data.length) {
         load_btn.setAttribute('disabled', 'true')
+        load_btn.textContent = 'No more data'
+        load_btn.style.cursor = 'not-allowed'
     }
 }
 
+function searchCountryName(e) {
 
+    const country = fetchCountryByTerm(e.target.value)
+
+    countries_cont.innerHTML = ''
+
+    country.then(data => {
+
+        loadMore()
+        load_btn.addEventListener('click', loadMore)
+    }).catch(error => {
+        console.log(error)
+    })
+}
 
 
 
@@ -92,9 +120,28 @@ country.then(data => {
     console.log(error)
 })
 
+async function fetchRegionCountry(region) {
+    response = await fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+    data = await response.json()
+    return data
+}
+
+async function fetchCountryByTerm(term) {
+    response = await fetch(`https://restcountries.eu/rest/v2/name/${term}`)
+    data = await response.json()
+    return data
+}
+
 // event listeners
 switcher.addEventListener('click', changeMood)
 
 filter_box.addEventListener('click', changeRegion)
 
 region_category.addEventListener('click', chooseRegion)
+
+searchInput.addEventListener('keyup', searchCountryName)
+
+searchForm.addEventListener('submit', e => {
+    e.preventDefault()
+
+})
