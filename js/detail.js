@@ -47,6 +47,13 @@ function backHome(e) {
     window.location.replace('/index.html')
 }
 
+function redirectBorder(e) {
+    if (e.target.tagName === 'BUTTON') {
+        console.log(e.target.textContent)
+        window.location.replace(`/detail.html?country=${e.target.textContent}`)
+    }
+}
+
 // get particular country
 const urlParam = new URLSearchParams(window.location.search);
 const myParam = urlParam.get('country')
@@ -87,8 +94,6 @@ country_found.then(data => {
                 btn_cont.innerHTML += btn
             })
         })
-        console.log('yes')
-        console.log(datas.borders)
     } else {
         btn_cont.innerHTML = '<h3>This county has no neigbouring countries</h3>'
         console.log('no')
@@ -99,3 +104,4 @@ country_found.then(data => {
 // event listeners
 switcher.addEventListener('click', changeMood)
 back_btn.addEventListener('click', backHome)
+btn_cont.addEventListener('click', redirectBorder)
