@@ -19,7 +19,7 @@ class Card {
                         <img src="${this.country.flag}" alt="">
                     </div>
                     <div class="card_info">
-                        <h2><a href="/detail.html?country=${this.country.name}">${this.country.name}</a> </h2>
+                        <h2><a href="detail.html?country=${this.country.name}">${this.country.name}</a> </h2>
                         <h3>Population : <span>${this.country.population}</span> </h3>
                         <h3>Region: <span>${this.country.region}</span> </h3>
                         <h3>Capital: <span>${this.country.capital}</span> </h3>
