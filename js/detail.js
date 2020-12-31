@@ -51,7 +51,7 @@ function backHome(e) {
 function redirectBorder(e) {
     if (e.target.tagName === 'BUTTON') {
         console.log(e.target.textContent)
-        window.location.replace(`/detail.html?country=${e.target.textContent}`)
+        window.location.replace(`detail.html?country=${e.target.textContent}`)
     }
 }
 
