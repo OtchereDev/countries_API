@@ -97,7 +97,7 @@ function searchCountryName(e) {
             loadMore()
             load_btn.addEventListener('click', loadMore)
             countries_cont.style.justifyContent = 'space-between'
-            countries_cont.style.alignItems = 'unset'
+            countries_cont.style.alignItems = 'center'
             countries_cont.style.marginBottom = 'auto'
             load_btn.style.display = 'block'
         } else {
