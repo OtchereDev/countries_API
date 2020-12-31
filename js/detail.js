@@ -13,6 +13,7 @@ const ion_icon = document.querySelector('.moon ion-icon')
 const body = document.querySelector('body')
 const btn_cont = document.querySelector('.border_btn')
 const back_btn = document.querySelector('.back_btn')
+const country_det = document.querySelector('.country_det')
 
 // functions
 function changeMood(e) {
@@ -35,7 +36,8 @@ async function getBorderCountry(border) {
 async function fetchCountry(name) {
     response = await fetch(`https://restcountries.eu/rest/v2/name/${name}`)
     data = await response.json()
-    return data
+    const status = response.ok
+    return { data, status }
 }
 
 function btnMaker(country) {
@@ -61,42 +63,51 @@ const myParam = urlParam.get('country')
 const country_found = fetchCountry(myParam)
 
 country_found.then(data => {
-    const datas = data[0]
 
+    if (data.status) {
+        const datas = data.data[0]
 
-    country_flag.setAttribute('src', datas.flag);
-    country_name.textContent = datas.name;
-    country_native.textContent = datas.nativeName;
-    country_pop.textContent = datas.population;
-    country_region.textContent = datas.region;
-    country_subreg.textContent = datas.subregion;
-    country_cap.textContent = datas.capital;
-    country_domain.textContent = datas.topLevelDomain[0];
-    datas.currencies.forEach(curr => {
-        if (country_curr.textContent) {
-            country_curr.textContent += `, ${curr.name}`
-        } else {
-            country_curr.textContent = `${curr.name}`
-        }
-    })
-    datas.languages.forEach(lan => {
-        if (country_lan.textContent) {
-            country_lan.textContent += `, ${lan.name}`
-        } else {
-            country_lan.textContent = `${lan.name}`
-        }
-    })
-
-    if (datas.borders.length) {
-        datas.borders.forEach(border => {
-            getBorderCountry(border).then(data => {
-                const btn = btnMaker(data.name)
-                btn_cont.innerHTML += btn
-            })
+        country_flag.setAttribute('src', datas.flag);
+        country_name.textContent = datas.name;
+        country_native.textContent = datas.nativeName;
+        country_pop.textContent = datas.population;
+        country_region.textContent = datas.region;
+        country_subreg.textContent = datas.subregion;
+        country_cap.textContent = datas.capital;
+        country_domain.textContent = datas.topLevelDomain[0];
+        datas.currencies.forEach(curr => {
+            if (country_curr.textContent) {
+                country_curr.textContent += `, ${curr.name}`
+            } else {
+                country_curr.textContent = `${curr.name}`
+            }
         })
+        datas.languages.forEach(lan => {
+            if (country_lan.textContent) {
+                country_lan.textContent += `, ${lan.name}`
+            } else {
+                country_lan.textContent = `${lan.name}`
+            }
+        })
+
+        if (datas.borders.length) {
+            datas.borders.forEach(border => {
+                getBorderCountry(border).then(data => {
+                    const btn = btnMaker(data.name)
+                    btn_cont.innerHTML += btn
+                })
+            })
+        } else {
+            btn_cont.innerHTML = '<h3>This county has no neigbouring countries</h3>'
+            console.log('no')
+        }
+
     } else {
-        btn_cont.innerHTML = '<h3>This county has no neigbouring countries</h3>'
-        console.log('no')
+        country_det.innerHTML = '<h1>No country data for country with this name</h1>'
+        country_det.style.width = '100%'
+        country_det.style.justifyContent = 'center'
+        country_det.style.textAlign = 'center'
+
     }
 
 })
